@@ -1,0 +1,1037 @@
+{
+  "version": "3.1",
+  "fuente": "Copia_de_Plantilla_Cafeteria_CONWAY_-_TOP_MANAGE.xlsx",
+  "campo_codigo": "CODIGO RAPIDO (5 digitos) - es lo que se inyecta al POS",
+  "moneda": "USD",
+  "categorias": [
+    {
+      "nombre": "DESAYUNO",
+      "subcategorias": [
+        {
+          "nombre": "BOLLERIA",
+          "productos": [
+            {
+              "nombre": "AREPAS",
+              "codigo": "10001",
+              "precio": 3.0,
+              "sku": "RE1603-01000"
+            },
+            {
+              "nombre": "CROISSANT",
+              "codigo": "10002",
+              "precio": 2.0,
+              "sku": "RE1603-01001"
+            },
+            {
+              "nombre": "EMPANADA",
+              "codigo": "10003",
+              "precio": 2.5,
+              "sku": "RE1603-01002"
+            },
+            {
+              "nombre": "HOJALDRE",
+              "codigo": "10004",
+              "precio": 0.5,
+              "sku": "RE1603-01003"
+            },
+            {
+              "nombre": "PANUELOS",
+              "codigo": "10005",
+              "precio": 2.0,
+              "sku": "RE1603-01004"
+            }
+          ]
+        },
+        {
+          "nombre": "EMPAREDADOS",
+          "productos": [
+            {
+              "nombre": "CLUB SANDWICH CON PAPAS",
+              "codigo": "11001",
+              "precio": 9.75,
+              "sku": "RE1603-01005"
+            },
+            {
+              "nombre": "DERRETIDO DE QUESO AMARILLO",
+              "codigo": "11007",
+              "precio": 4.0,
+              "sku": "RE1603-01011"
+            },
+            {
+              "nombre": "DERRETIDO DE QUESO BLANCO",
+              "codigo": "11008",
+              "precio": 4.0,
+              "sku": "RE1603-01012"
+            },
+            {
+              "nombre": "EMPAREDADO DE COMBINACION",
+              "codigo": "11002",
+              "precio": 8.5,
+              "sku": "RE1603-01006"
+            },
+            {
+              "nombre": "EMPAREDADO DE HUEVO",
+              "codigo": "11003",
+              "precio": 5.75,
+              "sku": "RE1603-01007"
+            },
+            {
+              "nombre": "EMPAREDADO DE JAMON CON QUESO",
+              "codigo": "11004",
+              "precio": 7.0,
+              "sku": "RE1603-01008"
+            },
+            {
+              "nombre": "EMPAREDADO DE JAMON DE PAVO",
+              "codigo": "11005",
+              "precio": 7.0,
+              "sku": "RE1603-01009"
+            },
+            {
+              "nombre": "EMPAREDADO DE PECHUGA DE POLLO",
+              "codigo": "11006",
+              "precio": 8.5,
+              "sku": "RE1603-01010"
+            }
+          ]
+        },
+        {
+          "nombre": "HUEVOS",
+          "productos": [
+            {
+              "nombre": "HUEVO REVUELTO",
+              "codigo": "12001",
+              "precio": 1.0,
+              "sku": "RE1603-01013"
+            },
+            {
+              "nombre": "HUEVOS REVUELTO CON BACON",
+              "codigo": "12002",
+              "precio": 3.5,
+              "sku": "RE1603-01014"
+            },
+            {
+              "nombre": "HUEVOS REVUELTO CON JAMON",
+              "codigo": "12003",
+              "precio": 3.5,
+              "sku": "RE1603-01015"
+            },
+            {
+              "nombre": "PATACONES CON HUEVO",
+              "codigo": "12004",
+              "precio": 2.25,
+              "sku": "RE1603-01016"
+            }
+          ]
+        },
+        {
+          "nombre": "TOSTADAS",
+          "productos": [
+            {
+              "nombre": "TOSTADAS",
+              "codigo": "13001",
+              "precio": 1.0,
+              "sku": "RE1603-01017"
+            },
+            {
+              "nombre": "TOSTADAS CON QUESO",
+              "codigo": "13002",
+              "precio": 1.5,
+              "sku": "RE1603-01018"
+            },
+            {
+              "nombre": "TOSTADAS JAMON  CON QUESO",
+              "codigo": "13003",
+              "precio": 2.0,
+              "sku": "RE1603-01019"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "COMIDA",
+      "subcategorias": [
+        {
+          "nombre": "CARNES",
+          "productos": [
+            {
+              "nombre": "BROCHETAS",
+              "codigo": "20006",
+              "precio": 5.5,
+              "sku": "RE1602-01005"
+            },
+            {
+              "nombre": "FILETE AL AJILLO",
+              "codigo": "20001",
+              "precio": 12.25,
+              "sku": "RE1602-01000"
+            },
+            {
+              "nombre": "FILETE EN SALSA DE HONGO",
+              "codigo": "20002",
+              "precio": 12.25,
+              "sku": "RE1602-01001"
+            },
+            {
+              "nombre": "FILETE MIGNON",
+              "codigo": "20003",
+              "precio": 14.25,
+              "sku": "RE1602-01002"
+            },
+            {
+              "nombre": "LOMITO SALTEADO",
+              "codigo": "20004",
+              "precio": 14.25,
+              "sku": "RE1602-01003"
+            },
+            {
+              "nombre": "MILANESA DE CARNE",
+              "codigo": "20005",
+              "precio": 11.75,
+              "sku": "RE1602-01004"
+            }
+          ]
+        },
+        {
+          "nombre": "POLLO",
+          "productos": [
+            {
+              "nombre": "MILANESA DE POLLO",
+              "codigo": "21005",
+              "precio": 10.75,
+              "sku": "RE1602-01010"
+            },
+            {
+              "nombre": "POLLO AL AJILLO",
+              "codigo": "21001",
+              "precio": 10.5,
+              "sku": "RE1602-01006"
+            },
+            {
+              "nombre": "POLLO APANADO",
+              "codigo": "21002",
+              "precio": 10.5,
+              "sku": "RE1602-01007"
+            },
+            {
+              "nombre": "POLLO EN SALSA DE HONGOS",
+              "codigo": "21003",
+              "precio": 10.5,
+              "sku": "RE1602-01008"
+            },
+            {
+              "nombre": "SALTEADO DE POLLO",
+              "codigo": "21004",
+              "precio": 10.75,
+              "sku": "RE1602-01009"
+            }
+          ]
+        },
+        {
+          "nombre": "PESCADOS",
+          "productos": [
+            {
+              "nombre": "CORVINA A LA PIZZAIOLA",
+              "codigo": "22001",
+              "precio": 11.75,
+              "sku": "RE1602-01011"
+            },
+            {
+              "nombre": "CORVINA AL AJILLO",
+              "codigo": "22002",
+              "precio": 11.75,
+              "sku": "RE1602-01012"
+            },
+            {
+              "nombre": "CORVINA APANADA",
+              "codigo": "22003",
+              "precio": 11.75,
+              "sku": "RE1602-01013"
+            },
+            {
+              "nombre": "CORVINA EN SALSA CRIOLLA",
+              "codigo": "22004",
+              "precio": 11.75,
+              "sku": "RE1602-01014"
+            },
+            {
+              "nombre": "FILETE DE ATUN",
+              "codigo": "22005",
+              "precio": 8.5,
+              "sku": "RE1602-01015"
+            }
+          ]
+        },
+        {
+          "nombre": "MARISCOS",
+          "productos": [
+            {
+              "nombre": "CAMARONES AL AJILLO",
+              "codigo": "23001",
+              "precio": 12.5,
+              "sku": "RE1602-01016"
+            },
+            {
+              "nombre": "CAMARONES EN SALSA CRIOLLA",
+              "codigo": "23002",
+              "precio": 12.25,
+              "sku": "RE1602-01017"
+            },
+            {
+              "nombre": "MARISCOS MIXTOS",
+              "codigo": "23003",
+              "precio": 12.5,
+              "sku": "RE1602-01018"
+            }
+          ]
+        },
+        {
+          "nombre": "ENSALADAS",
+          "productos": [
+            {
+              "nombre": "ENSALADA DE ATUN",
+              "codigo": "24001",
+              "precio": 7.5,
+              "sku": "RE1602-01019"
+            },
+            {
+              "nombre": "ENSALADA DE POLLO",
+              "codigo": "24002",
+              "precio": 8.0,
+              "sku": "RE1602-01020"
+            },
+            {
+              "nombre": "ENSALADA DE VEGETALES",
+              "codigo": "24003",
+              "precio": 6.5,
+              "sku": "RE1602-01021"
+            },
+            {
+              "nombre": "ENSALADA DEL CHEFF",
+              "codigo": "24004",
+              "precio": 8.25,
+              "sku": "RE1602-01022"
+            },
+            {
+              "nombre": "ENSALADA EXTRA",
+              "codigo": "24005",
+              "precio": 2.25,
+              "sku": "RE1602-01023"
+            },
+            {
+              "nombre": "ENSALADA GRIEGA",
+              "codigo": "24006",
+              "precio": 8.25,
+              "sku": "RE1602-01024"
+            },
+            {
+              "nombre": "ENSALADA ISRAELI",
+              "codigo": "24007",
+              "precio": 7.5,
+              "sku": "RE1602-01025"
+            }
+          ]
+        },
+        {
+          "nombre": "SOPAS",
+          "productos": [
+            {
+              "nombre": "SOPA CON ARROZ",
+              "codigo": "25001",
+              "precio": 4.5,
+              "sku": "RE1602-01026"
+            }
+          ]
+        },
+        {
+          "nombre": "ARROCES",
+          "productos": [
+            {
+              "nombre": "ARROZ BLANCO",
+              "codigo": "26003",
+              "precio": 2.5,
+              "sku": "RE1602-01029"
+            },
+            {
+              "nombre": "ARROZ CON POLLO",
+              "codigo": "26002",
+              "precio": 8.0,
+              "sku": "RE1602-01028"
+            },
+            {
+              "nombre": "ARROZ DE CAMARON",
+              "codigo": "26001",
+              "precio": 10.0,
+              "sku": "RE1602-01027"
+            }
+          ]
+        },
+        {
+          "nombre": "COMIDA ASIATICA",
+          "productos": [
+            {
+              "nombre": "CHOW MAIN CAMARON",
+              "codigo": "27002",
+              "precio": 10.0,
+              "sku": "RE1602-01031"
+            },
+            {
+              "nombre": "CHOW MAIN POLLO",
+              "codigo": "27001",
+              "precio": 8.0,
+              "sku": "RE1602-01030"
+            }
+          ]
+        },
+        {
+          "nombre": "COMIDA RAPIDA",
+          "productos": [
+            {
+              "nombre": "COMBO FULL COMIDA RAPIDA",
+              "codigo": "28002",
+              "precio": 4.5,
+              "sku": "RE1602-01033"
+            },
+            {
+              "nombre": "ENCHILADAS",
+              "codigo": "28001",
+              "precio": 2.0,
+              "sku": "RE1602-01032"
+            },
+            {
+              "nombre": "HAMBURGESA CON PAPAS",
+              "codigo": "28003",
+              "precio": 7.5,
+              "sku": "RE1602-01034"
+            },
+            {
+              "nombre": "HAMBURGUESA DOBLE DE POLLO",
+              "codigo": "28004",
+              "precio": 5.5,
+              "sku": "RE1602-01035"
+            },
+            {
+              "nombre": "NACHOS 1 PERSONA",
+              "codigo": "28008",
+              "precio": 5.5,
+              "sku": "RE1602-01039"
+            },
+            {
+              "nombre": "NACHOS 2 PERSONA",
+              "codigo": "28007",
+              "precio": 8.0,
+              "sku": "RE1602-01038"
+            },
+            {
+              "nombre": "SALCHIPAPAS 1 PERSONA",
+              "codigo": "28006",
+              "precio": 5.0,
+              "sku": "RE1602-01037"
+            },
+            {
+              "nombre": "SALCHIPAPAS 2 PERSONA",
+              "codigo": "28005",
+              "precio": 8.0,
+              "sku": "RE1602-01036"
+            }
+          ]
+        },
+        {
+          "nombre": "PASTAS",
+          "productos": [
+            {
+              "nombre": "LASAGNA CON CARNE/ENSALADA PEQUENA Y PAN CON AJO",
+              "codigo": "29001",
+              "precio": 5.0,
+              "sku": "RE1602-01040"
+            }
+          ]
+        },
+        {
+          "nombre": "MENU DEL DIA",
+          "productos": [
+            {
+              "nombre": "CENA DEL DIA ASOCIADO",
+              "codigo": "20103",
+              "precio": 2.25,
+              "sku": "RE1602-01043"
+            },
+            {
+              "nombre": "MENU DE DIA CLIENTE",
+              "codigo": "20101",
+              "precio": 5.0,
+              "sku": "RE1602-01041"
+            },
+            {
+              "nombre": "MENU DEL DIA  ASOCIADO",
+              "codigo": "20102",
+              "precio": 4.5,
+              "sku": "RE1602-01042"
+            }
+          ]
+        },
+        {
+          "nombre": "ADICIONALES",
+          "productos": [
+            {
+              "nombre": "MINIESTRAS",
+              "codigo": "20203",
+              "precio": 1.5,
+              "sku": "RE1602-01046"
+            },
+            {
+              "nombre": "MISCELANEO #1",
+              "codigo": "20204",
+              "precio": 0.05,
+              "sku": "RE1602-01047"
+            },
+            {
+              "nombre": "MISCELANEO #2",
+              "codigo": "20205",
+              "precio": 0.1,
+              "sku": "RE1602-01048"
+            },
+            {
+              "nombre": "MISCELANEO #3",
+              "codigo": "20206",
+              "precio": 0.25,
+              "sku": "RE1602-01049"
+            },
+            {
+              "nombre": "MISCELANEO #4",
+              "codigo": "20207",
+              "precio": 1.0,
+              "sku": "RE1602-01050"
+            },
+            {
+              "nombre": "PAN PITA",
+              "codigo": "20202",
+              "precio": 3.0,
+              "sku": "RE1602-01045"
+            },
+            {
+              "nombre": "PAPAS  FRITAS",
+              "codigo": "20201",
+              "precio": 2.5,
+              "sku": "RE1602-01044"
+            },
+            {
+              "nombre": "PORTA VIANDA",
+              "codigo": "20208",
+              "precio": 0.15,
+              "sku": "RE1602-01051"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "BEBIDAS",
+      "subcategorias": [
+        {
+          "nombre": "CAFE EMPACADO",
+          "productos": [
+            {
+              "nombre": "BOLSA DE CAFE",
+              "codigo": "30001",
+              "precio": 8.5,
+              "sku": "RE1601-01000"
+            }
+          ]
+        },
+        {
+          "nombre": "BEBIDAS CALIENTES",
+          "productos": [
+            {
+              "nombre": "CAFE CON LECHE 12 OZ",
+              "codigo": "31002",
+              "precio": 2.0,
+              "sku": "RE1601-01002"
+            },
+            {
+              "nombre": "CAFE CON LECHE 12 OZ ASOCIADO",
+              "codigo": "31003",
+              "precio": 1.2,
+              "sku": "RE1601-01003"
+            },
+            {
+              "nombre": "CAFE CON LECHE 6 OZ",
+              "codigo": "31006",
+              "precio": 1.5,
+              "sku": "RE1601-01006"
+            },
+            {
+              "nombre": "CAFE CON LECHE 8 OZ",
+              "codigo": "31004",
+              "precio": 1.75,
+              "sku": "RE1601-01004"
+            },
+            {
+              "nombre": "CAFE CON LECHE 8 OZ ASOCIADO",
+              "codigo": "31005",
+              "precio": 1.0,
+              "sku": "RE1601-01005"
+            },
+            {
+              "nombre": "CAFE NEGRO 12 OZ",
+              "codigo": "31007",
+              "precio": 1.75,
+              "sku": "RE1601-01007"
+            },
+            {
+              "nombre": "CAFE NEGRO 12 OZ ASOCIADO",
+              "codigo": "31008",
+              "precio": 1.2,
+              "sku": "RE1601-01008"
+            },
+            {
+              "nombre": "CAFE NEGRO 6 OZ",
+              "codigo": "31011",
+              "precio": 1.25,
+              "sku": "RE1601-01011"
+            },
+            {
+              "nombre": "CAFE NEGRO 8 OZ",
+              "codigo": "31009",
+              "precio": 1.5,
+              "sku": "RE1601-01009"
+            },
+            {
+              "nombre": "CAFE NEGRO 8 OZ ASOCIADO",
+              "codigo": "31010",
+              "precio": 1.0,
+              "sku": "RE1601-01010"
+            },
+            {
+              "nombre": "CAPUCHINO 12 OZ",
+              "codigo": "31012",
+              "precio": 2.5,
+              "sku": "RE1601-01012"
+            },
+            {
+              "nombre": "CAPUCHINO 6 OZ",
+              "codigo": "31014",
+              "precio": 2.0,
+              "sku": "RE1601-01014"
+            },
+            {
+              "nombre": "CAPUCHINO 8 OZ",
+              "codigo": "31013",
+              "precio": 2.25,
+              "sku": "RE1601-01013"
+            },
+            {
+              "nombre": "CHOCOLATE 12 OZ",
+              "codigo": "31015",
+              "precio": 2.5,
+              "sku": "RE1601-01015"
+            },
+            {
+              "nombre": "CHOCOLATE 6 OZ",
+              "codigo": "31017",
+              "precio": 2.0,
+              "sku": "RE1601-01017"
+            },
+            {
+              "nombre": "CHOCOLATE 8 OZ",
+              "codigo": "31016",
+              "precio": 2.25,
+              "sku": "RE1601-01016"
+            },
+            {
+              "nombre": "EXPRESO DOBLE",
+              "codigo": "31001",
+              "precio": 2.0,
+              "sku": "RE1601-01001"
+            },
+            {
+              "nombre": "LECHE CALIENTE 12 OZ",
+              "codigo": "31021",
+              "precio": 2.0,
+              "sku": "RE1601-01021"
+            },
+            {
+              "nombre": "LECHE CALIENTE 8 OZ",
+              "codigo": "31022",
+              "precio": 1.75,
+              "sku": "RE1601-01022"
+            },
+            {
+              "nombre": "LECHE CLIENTE 6 OZ",
+              "codigo": "31023",
+              "precio": 1.25,
+              "sku": "RE1601-01023"
+            },
+            {
+              "nombre": "MOCACCINO 12 OZ",
+              "codigo": "31018",
+              "precio": 2.75,
+              "sku": "RE1601-01018"
+            },
+            {
+              "nombre": "MOCACCINO 6 OZ",
+              "codigo": "31020",
+              "precio": 2.0,
+              "sku": "RE1601-01020"
+            },
+            {
+              "nombre": "MOCACCINO 8 OZ",
+              "codigo": "31019",
+              "precio": 2.25,
+              "sku": "RE1601-01019"
+            },
+            {
+              "nombre": "TE CON LECHE 12 OZ",
+              "codigo": "31024",
+              "precio": 2.25,
+              "sku": "RE1601-01024"
+            },
+            {
+              "nombre": "TE CON LECHE 6 OZ",
+              "codigo": "31026",
+              "precio": 1.5,
+              "sku": "RE1601-01026"
+            },
+            {
+              "nombre": "TE CON LECHE 8 OZ",
+              "codigo": "31025",
+              "precio": 2.0,
+              "sku": "RE1601-01025"
+            },
+            {
+              "nombre": "TE EN AGUA 12 OZ",
+              "codigo": "31027",
+              "precio": 1.75,
+              "sku": "RE1601-01027"
+            },
+            {
+              "nombre": "TE EN AGUA 6 OZ",
+              "codigo": "31029",
+              "precio": 1.25,
+              "sku": "RE1601-01029"
+            },
+            {
+              "nombre": "TE EN AGUA 8 OZ",
+              "codigo": "31028",
+              "precio": 1.5,
+              "sku": "RE1601-01028"
+            }
+          ]
+        },
+        {
+          "nombre": "BEBIDAS FRIAS",
+          "productos": [
+            {
+              "nombre": "AGUA 1 L ASOCIADO",
+              "codigo": "32004",
+              "precio": 1.25,
+              "sku": "RE1601-01033"
+            },
+            {
+              "nombre": "AGUA 350 ML",
+              "codigo": "32006",
+              "precio": 0.79,
+              "sku": "RE1601-01035"
+            },
+            {
+              "nombre": "AGUA 600 ML",
+              "codigo": "32005",
+              "precio": 0.89,
+              "sku": "RE1601-01034"
+            },
+            {
+              "nombre": "AGUA DE ALOE",
+              "codigo": "32001",
+              "precio": 2.0,
+              "sku": "RE1601-01030"
+            },
+            {
+              "nombre": "AGUA DE COCO",
+              "codigo": "32002",
+              "precio": 1.75,
+              "sku": "RE1601-01031"
+            },
+            {
+              "nombre": "AGUA1 L",
+              "codigo": "32003",
+              "precio": 1.5,
+              "sku": "RE1601-01032"
+            },
+            {
+              "nombre": "BATIDO 12 OZ",
+              "codigo": "32007",
+              "precio": 4.75,
+              "sku": "RE1601-01036"
+            },
+            {
+              "nombre": "BATIDO 16 OZ",
+              "codigo": "32008",
+              "precio": 5.75,
+              "sku": "RE1601-01037"
+            },
+            {
+              "nombre": "GATORADE",
+              "codigo": "32017",
+              "precio": 1.5,
+              "sku": "RE1601-01046"
+            },
+            {
+              "nombre": "JUGO CARTON",
+              "codigo": "32011",
+              "precio": 0.75,
+              "sku": "RE1601-01040"
+            },
+            {
+              "nombre": "JUGO DE CAÑA",
+              "codigo": "32010",
+              "precio": 1.5,
+              "sku": "RE1601-01039"
+            },
+            {
+              "nombre": "JUGO DE LATA",
+              "codigo": "32012",
+              "precio": 1.25,
+              "sku": "RE1601-01041"
+            },
+            {
+              "nombre": "JUGO DEL VALLE",
+              "codigo": "32013",
+              "precio": 1.0,
+              "sku": "RE1601-01042"
+            },
+            {
+              "nombre": "JUGO VARIADO",
+              "codigo": "32009",
+              "precio": 2.5,
+              "sku": "RE1601-01038"
+            },
+            {
+              "nombre": "SODA DE LATA",
+              "codigo": "32018",
+              "precio": 1.25,
+              "sku": "RE1601-01047"
+            },
+            {
+              "nombre": "TE FRIO DURAZNO",
+              "codigo": "32016",
+              "precio": 1.25,
+              "sku": "RE1601-01045"
+            },
+            {
+              "nombre": "TE FRIO HI-C",
+              "codigo": "32014",
+              "precio": 1.0,
+              "sku": "RE1601-01043"
+            },
+            {
+              "nombre": "TE FRIO LIMÓN",
+              "codigo": "32015",
+              "precio": 1.25,
+              "sku": "RE1601-01044"
+            },
+            {
+              "nombre": "YOGURT",
+              "codigo": "32019",
+              "precio": 1.25,
+              "sku": "RE1601-01048"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "POSTRES",
+      "subcategorias": [
+        {
+          "nombre": "POSTRES FRIOS",
+          "productos": [
+            {
+              "nombre": "ARROZ CON LECHE",
+              "codigo": "40001",
+              "precio": 1.5,
+              "sku": "RE1604-01000"
+            },
+            {
+              "nombre": "CONO RELLENO",
+              "codigo": "40007",
+              "precio": 1.75,
+              "sku": "RE1604-01006"
+            },
+            {
+              "nombre": "DULCE FRIO",
+              "codigo": "40002",
+              "precio": 3.5,
+              "sku": "RE1604-01001"
+            },
+            {
+              "nombre": "FLAN",
+              "codigo": "40003",
+              "precio": 2.0,
+              "sku": "RE1604-01002"
+            },
+            {
+              "nombre": "GELATINA",
+              "codigo": "40004",
+              "precio": 2.0,
+              "sku": "RE1604-01003"
+            },
+            {
+              "nombre": "GELATINA CON YOGURT",
+              "codigo": "40005",
+              "precio": 2.0,
+              "sku": "RE1604-01004"
+            },
+            {
+              "nombre": "HELADO 2 BOLAS",
+              "codigo": "40006",
+              "precio": 2.25,
+              "sku": "RE1604-01005"
+            },
+            {
+              "nombre": "POSTRE INGLES",
+              "codigo": "40008",
+              "precio": 2.5,
+              "sku": "RE1604-01007"
+            }
+          ]
+        },
+        {
+          "nombre": "PASTELES",
+          "productos": [
+            {
+              "nombre": "BACKLAVA",
+              "codigo": "41001",
+              "precio": 2.0,
+              "sku": "RE1604-01009"
+            },
+            {
+              "nombre": "BISCOCHO",
+              "codigo": "41002",
+              "precio": 2.0,
+              "sku": "RE1604-01010"
+            },
+            {
+              "nombre": "BRAZO GITANO",
+              "codigo": "40009",
+              "precio": 1.25,
+              "sku": "RE1604-01008"
+            },
+            {
+              "nombre": "BROWNIE",
+              "codigo": "41003",
+              "precio": 2.0,
+              "sku": "RE1604-01011"
+            },
+            {
+              "nombre": "CHEESE CAKE",
+              "codigo": "41004",
+              "precio": 4.0,
+              "sku": "RE1604-01012"
+            },
+            {
+              "nombre": "CHOCO FLAN",
+              "codigo": "41005",
+              "precio": 3.5,
+              "sku": "RE1604-01013"
+            },
+            {
+              "nombre": "DULCE DE ALMENDRA",
+              "codigo": "41006",
+              "precio": 3.25,
+              "sku": "RE1604-01014"
+            },
+            {
+              "nombre": "DULCE DE ZANAHORIA",
+              "codigo": "41008",
+              "precio": 3.5,
+              "sku": "RE1604-01016"
+            },
+            {
+              "nombre": "DULCE VARIADO",
+              "codigo": "41007",
+              "precio": 3.5,
+              "sku": "RE1604-01015"
+            },
+            {
+              "nombre": "MAMALLENA",
+              "codigo": "41009",
+              "precio": 2.0,
+              "sku": "RE1604-01017"
+            },
+            {
+              "nombre": "SELVA NEGRA",
+              "codigo": "41010",
+              "precio": 3.25,
+              "sku": "RE1604-01018"
+            },
+            {
+              "nombre": "TRES LECHE",
+              "codigo": "41011",
+              "precio": 3.5,
+              "sku": "RE1604-01019"
+            }
+          ]
+        },
+        {
+          "nombre": "TARTAS",
+          "productos": [
+            {
+              "nombre": "ESTRUDEL",
+              "codigo": "42001",
+              "precio": 2.0,
+              "sku": "RE1604-01020"
+            },
+            {
+              "nombre": "PIE DE COCO",
+              "codigo": "42002",
+              "precio": 3.5,
+              "sku": "RE1604-01021"
+            },
+            {
+              "nombre": "PIE DE LIMON",
+              "codigo": "42003",
+              "precio": 3.5,
+              "sku": "RE1604-01022"
+            },
+            {
+              "nombre": "PIE DE MANZANA",
+              "codigo": "42004",
+              "precio": 3.5,
+              "sku": "RE1604-01023"
+            },
+            {
+              "nombre": "PIE DE MARACUYA",
+              "codigo": "42005",
+              "precio": 3.5,
+              "sku": "RE1604-01024"
+            },
+            {
+              "nombre": "PIE DE PECANA",
+              "codigo": "42006",
+              "precio": 3.5,
+              "sku": "RE1604-01025"
+            },
+            {
+              "nombre": "TARTALETA",
+              "codigo": "42007",
+              "precio": 3.75,
+              "sku": "RE1604-01026"
+            }
+          ]
+        },
+        {
+          "nombre": "ADICIONALES",
+          "productos": [
+            {
+              "nombre": "SIROPE EXTRA",
+              "codigo": "43001",
+              "precio": 0.25,
+              "sku": "RE1604-01027"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

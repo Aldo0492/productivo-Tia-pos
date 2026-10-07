@@ -1,0 +1,29 @@
+{
+  "cadena": "conway",
+  "terminal": "conway-001",
+  "fullscreen": {
+    "pantalla_id": "PANTALLA003",
+    "token": "7bcaf7168ee34269a13813df036b8f58"
+  },
+  "mini": {
+    "pantalla_id": "PANTALLA004",
+    "token": "58cdb68ac8aa4350b1b9b83b265fff21"
+  },
+  "beyou": {
+    "activo": true,
+    "etiqueta": "CONWAY&FRIENDS",
+    "api_url": "https://api3.clau.io/pos/v3/consultar_usuario",
+    "apikey": "POS-Q3Jv0NvPglvRI2nBp33vskpojdYSXI9AWnULoh2r0xYM",
+    "appid": "375",
+    "origen": "POS-TIA-Conway",
+    "logo": "and_friends.png"
+  },
+  "mercancia": {
+    "activo": true,
+    "webhook_consulta": "https://n8ndev.grupotova.com/webhook/mercancia-consulta-Conway",
+    "webhook_venta": "https://n8ndev.grupotova.com/webhook/mercancia-venta-Conway",
+    "recibo_selector": "",
+    "recibo_regex": "ID\\s*[:#]\\s*([A-Za-z]\\d{6,})"
+  },
+  "comentario": "Configuracion para CONWAY. Lealtad: '&FRIENDS - tu programa de puntos' (reemplaza a BE YOU, se maneja igual via Clau.io). Reemplazar api_url/apikey/appid con los valores de PRODUCCION de la pantalla TopManage Loyalty. Bloque 'mercancia': webhook_consulta busca el articulo (devuelve departamento, precio, descripcion, codigo_generico); webhook_venta guarda la venta (departamento, precio, descripcion, codigo_generico, id_recibo). Para el id_recibo, definir recibo_selector (selector CSS del elemento del POS que muestra el recibo) o recibo_regex (regex sobre el texto de la pagina, grupo 1 = numero). Si ambos quedan vacios, se usan heuristicas por etiqueta (Recibo/Documento/Transaccion/Factura)."
+}

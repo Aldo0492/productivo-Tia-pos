@@ -1,0 +1,22 @@
+{
+  "cadena": "campeon",
+  "terminal": "campeon-001",
+  "fullscreen": {
+    "pantalla_id": "PANTALLA005",
+    "token": "a405935d674b4f898c35d4970fba16f5"
+  },
+  "mini": {
+    "pantalla_id": "PANTALLA006",
+    "token": "811cca2c7bcb4d1e89907b08814ee80f"
+  },
+  "beyou": {
+    "activo": true,
+    "etiqueta": "CAMPEÓN PASS",
+    "api_url": "https://appmadison.clau.io/pos/v3/consultar_usuario",
+    "apikey": "POS-f5k597dmJOLycFreUtMJs9azlbZtseLskKYvkRFqFtgp",
+    "appid": "15",
+    "origen": "POS-TIA-Campeon",
+    "logo": "campeon_pass.png"
+  },
+  "comentario": "Configuracion para CAMPEON. apikey y APPID (15) son de PRODUCCION. FALTA la api_url: leerla en una caja de Campeon en la pantalla 'TopManage Loyalty', campos 'CLAU API URL' + 'CLAU API Endpoint GetMemberDetails' (en Stevens resulto https://appstevens.clau.io/pos/v3/consultar_usuario, asi que la de Campeon probablemente sea otro subdominio: NO adivinarla, confirmarla en la caja). Faltan tambien pantalla_id y token de las pantallas de publicidad."
+}

@@ -1,0 +1,22 @@
+{
+  "cadena": "stevens",
+  "terminal": "stevens-001",
+  "fullscreen": {
+    "pantalla_id": "PANTALLA001",
+    "token": "14ddec48139048c9bbca3a89c1b63e06"
+  },
+  "mini": {
+    "pantalla_id": "PANTALLA002",
+    "token": "a95f9f56f50b4b9f9b970ec24e61be23"
+  },
+  "beyou": {
+    "activo": true,
+    "etiqueta": "BE YOU",
+    "api_url": "https://appstevens.clau.io/pos/v3/consultar_usuario",
+    "apikey": "POS-3hk597dmJOLycFreUtMJs9azlbZtseLskKYvkRFqUtHy",
+    "appid": "321",
+    "origen": "POS-TIA-Stevens",
+    "logo": "be_you.png"
+  },
+  "comentario": "Configuracion para STEVENS. URL, apikey y APPID (321) son de PRODUCCION, tomados de la pantalla TopManage Loyalty de la caja (CLAU API URL + endpoint GetMemberDetails). Los tokens de fullscreen/mini son de tovastreaming y son distintos por pantalla."
+}

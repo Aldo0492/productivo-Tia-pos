@@ -1,0 +1,1732 @@
+/* ── Fuente ── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ══════════════════════════════════════════
+   BOTÓN FLOTANTE
+══════════════════════════════════════════ */
+#ia-pos-floating-btn {
+  position: fixed !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2147483646 !important;
+  background: #1a2744 !important;
+  color: white !important;
+  writing-mode: vertical-rl !important;
+  text-orientation: mixed !important;
+  padding: 16px 9px !important;
+  border-radius: 12px 0 0 12px !important;
+  cursor: pointer !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  box-shadow: -4px 0 20px rgba(26,39,68,.35) !important;
+  user-select: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  visibility: visible !important;
+  border: none !important;
+  transition: background .2s !important;
+}
+#ia-pos-floating-btn:hover { background: #243260 !important; }
+
+/* ══════════════════════════════════════════
+   PANEL PRINCIPAL
+══════════════════════════════════════════ */
+#ia-pos-panel {
+  position: fixed !important;
+  top: 0 !important;
+  right: -520px !important;
+  width: 500px !important;
+  height: 100vh !important;
+  background: #f0f2f7 !important;
+  z-index: 2147483647 !important;
+  transition: right .32s cubic-bezier(.4,0,.2,1) !important;
+  box-shadow: -12px 0 40px rgba(0,0,0,.18) !important;
+  box-sizing: border-box !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  visibility: visible !important;
+}
+#ia-pos-panel.open { right: 0 !important; }
+
+/* ── Header ── */
+#ia-pos-panel .ia-header {
+  background: #1a2744 !important;
+  padding: 14px 16px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+#ia-pos-panel .ia-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+#ia-pos-panel .ia-brand-name {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  letter-spacing: .5px !important;
+}
+
+#ia-pos-panel .ia-logo {
+  width: 65px !important;
+  height: 65px !important;
+  object-fit: contain !important;
+  border-radius: 8px !important;
+  background: white !important;
+  padding: 3px !important;
+  box-sizing: border-box !important;
+}
+
+#ia-pos-panel .ia-header-actions {
+  display: flex !important;
+  gap: 6px !important;
+  align-items: center !important;
+}
+
+#ia-pos-panel #ia-back,
+#ia-pos-panel #ia-close {
+  background: rgba(255,255,255,.12) !important;
+  border: none !important;
+  color: white !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background .2s !important;
+  pointer-events: auto !important;
+}
+#ia-pos-panel #ia-back:hover,
+#ia-pos-panel #ia-close:hover { background: rgba(255,255,255,.22) !important; }
+
+/* ── Contenido scrolleable ── */
+#ia-pos-panel .ia-view {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: 20px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+#ia-pos-panel .ia-view.ia-hidden { display: none !important; }
+
+.ia-subtitle {
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  margin: 0 0 16px 0 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .8px !important;
+}
+
+/* ══════════════════════════════════════════
+   MENÚ PRINCIPAL
+══════════════════════════════════════════ */
+.ia-main-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+}
+
+.ia-main-card {
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  padding: 20px 14px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  transition: all .2s !important;
+  text-align: left !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+}
+.ia-main-card:hover {
+  border-color: #1a2744 !important;
+  box-shadow: 0 4px 18px rgba(26,39,68,.12) !important;
+  transform: translateY(-2px) !important;
+}
+
+.ia-card-icon { font-size: 28px !important; line-height: 1 !important; }
+.ia-card-label { font-weight: 700 !important; font-size: 15px !important; color: #111827 !important; }
+.ia-card-desc  { font-size: 12px !important; color: #6b7280 !important; line-height: 1.4 !important; }
+
+/* ══════════════════════════════════════════
+   PROCESOS
+══════════════════════════════════════════ */
+.ia-procesos-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
+
+.ia-proceso-btn {
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  padding: 14px 10px !important;
+  cursor: pointer !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #1a2744 !important;
+  transition: all .18s !important;
+  text-align: center !important;
+  line-height: 1.4 !important;
+}
+.ia-proceso-btn:hover {
+  background: #1a2744 !important;
+  color: white !important;
+  border-color: #1a2744 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(26,39,68,.2) !important;
+}
+
+/* ══════════════════════════════════════════
+   PREGUNTAS
+══════════════════════════════════════════ */
+.ia-preguntas-lista {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.ia-pregunta-item {
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  cursor: pointer !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #1f2937 !important;
+  text-align: left !important;
+  line-height: 1.4 !important;
+  transition: all .18s !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.ia-pregunta-item::before {
+  content: "→" !important;
+  color: #1a2744 !important;
+  font-weight: 700 !important;
+  flex-shrink: 0 !important;
+}
+.ia-pregunta-item:hover {
+  background: #1a2744 !important;
+  color: white !important;
+  border-color: #1a2744 !important;
+}
+.ia-pregunta-item:hover::before { color: white !important; }
+
+/* ══════════════════════════════════════════
+   ERRORES DE CAJA
+══════════════════════════════════════════ */
+#ia-pos-panel #ia-capturar {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+  background: #1a2744 !important;
+  color: white !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  transition: opacity .18s !important;
+}
+#ia-pos-panel #ia-capturar:hover { opacity: .88 !important; }
+
+#ia-pos-panel #ia-preview {
+  width: 100% !important;
+  margin-top: 12px !important;
+  border-radius: 12px !important;
+  border: 1.5px solid #e5e7eb !important;
+}
+#ia-pos-panel #ia-preview:not([src]),
+#ia-pos-panel #ia-preview[src=""] {
+  display: none !important;
+}
+
+/* ══════════════════════════════════════════
+   SPINNER / LOADING
+══════════════════════════════════════════ */
+#ia-pos-panel #ia-loading:not(.ia-hidden),
+#ia-pos-panel #ia-loading-proceso:not(.ia-hidden) {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-top: 16px !important;
+  color: #6b7280 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.ia-spinner {
+  width: 18px !important;
+  height: 18px !important;
+  border: 2.5px solid #e5e7eb !important;
+  border-top-color: #1a2744 !important;
+  border-radius: 50% !important;
+  animation: ia-spin .8s linear infinite !important;
+  flex-shrink: 0 !important;
+}
+@keyframes ia-spin { to { transform: rotate(360deg); } }
+
+/* ══════════════════════════════════════════
+   RESPUESTA HTML FORMATEADA
+══════════════════════════════════════════ */
+#ia-pos-panel #ia-respuesta,
+#ia-pos-panel #ia-respuesta-proceso {
+  margin-top: 4px !important;
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+  color: #1f2937 !important;
+}
+
+/* Nombre del proceso */
+#ia-pos-panel #ia-respuesta h3,
+#ia-pos-panel #ia-respuesta-proceso h3 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #1a2744 !important;
+  margin: 0 0 8px 0 !important;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid #e5e7eb !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+}
+
+/* Responsable */
+#ia-pos-panel #ia-respuesta p,
+#ia-pos-panel #ia-respuesta-proceso p {
+  margin: 0 0 8px 0 !important;
+  color: #374151 !important;
+  font-size: 13px !important;
+}
+
+#ia-pos-panel #ia-respuesta p strong,
+#ia-pos-panel #ia-respuesta-proceso p strong {
+  color: #1a2744 !important;
+  font-weight: 600 !important;
+}
+
+/* Lista de pasos */
+#ia-pos-panel #ia-respuesta ol,
+#ia-pos-panel #ia-respuesta-proceso ol {
+  counter-reset: step-counter !important;
+  margin: 6px 0 0 0 !important;
+  padding-left: 0 !important;
+  list-style: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+#ia-pos-panel #ia-respuesta ol li,
+#ia-pos-panel #ia-respuesta-proceso ol li {
+  counter-increment: step-counter !important;
+  position: relative !important;
+  display: block !important;
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  padding: 7px 10px 7px 34px !important;
+  font-size: 13px !important;
+  color: #1f2937 !important;
+  line-height: 1.5 !important;
+}
+
+#ia-pos-panel #ia-respuesta ol li::before,
+#ia-pos-panel #ia-respuesta-proceso ol li::before {
+  content: counter(step-counter) !important;
+  position: absolute !important;
+  left: 7px !important;
+  top: 7px !important;
+  background: #1a2744 !important;
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#ia-pos-panel #ia-respuesta ol li strong,
+#ia-pos-panel #ia-respuesta-proceso ol li strong {
+  color: #1a2744 !important;
+  font-weight: 700 !important;
+}
+
+/* ══════════════════════════════════════════
+   TARJETAS Y ERRORES
+══════════════════════════════════════════ */
+#ia-pos-panel .ia-card {
+  background: white !important;
+  border-radius: 14px !important;
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+  border: 1.5px solid #e5e7eb !important;
+}
+
+#ia-pos-panel .ia-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  color: #1a2744 !important;
+}
+
+#ia-pos-panel .ia-error {
+  background: #fef2f2 !important;
+  color: #991b1b !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid #fecaca !important;
+  font-size: 13px !important;
+}
+
+/* ── Utilitarios ── */
+.ia-hidden { display: none !important; }
+
+/* ══════════════════════════════════════════
+   SERVICE DESK
+══════════════════════════════════════════ */
+
+/* Tarjeta full-width en el menú */
+.ia-main-card--full {
+  grid-column: 1 / -1 !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 16px 18px !important;
+}
+.ia-main-card--full .ia-card-icon { font-size: 22px !important; }
+
+/* Info box con caja detectada */
+#ia-pos-panel .ia-sd-info {
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+#ia-pos-panel .ia-sd-caja-label {
+  font-size: 12px !important;
+  color: #6b7280 !important;
+  font-weight: 500 !important;
+}
+
+#ia-pos-panel .ia-sd-caja-valor {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #1a2744 !important;
+}
+
+/* Botones SD */
+#ia-pos-panel #ia-sd-capturar,
+#ia-pos-panel #ia-sd-enviar {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+  background: #1a2744 !important;
+  color: white !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  transition: opacity .18s !important;
+}
+#ia-pos-panel #ia-sd-capturar:hover,
+#ia-pos-panel #ia-sd-enviar:hover { opacity: .88 !important; }
+
+/* Preview SD */
+#ia-pos-panel #ia-sd-preview {
+  width: 100% !important;
+  margin-top: 12px !important;
+  border-radius: 12px !important;
+  border: 1.5px solid #e5e7eb !important;
+}
+#ia-pos-panel #ia-sd-preview:not([src]),
+#ia-pos-panel #ia-sd-preview[src=""] { display: none !important; }
+
+/* Textarea descripción */
+#ia-pos-panel #ia-sd-descripcion {
+  width: 100% !important;
+  margin-top: 10px !important;
+  padding: 12px 14px !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #1f2937 !important;
+  resize: none !important;
+  box-sizing: border-box !important;
+  background: white !important;
+  outline: none !important;
+}
+#ia-pos-panel #ia-sd-descripcion:focus {
+  border-color: #1a2744 !important;
+}
+
+/* Loading SD */
+#ia-pos-panel #ia-sd-loading:not(.ia-hidden) {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-top: 16px !important;
+  color: #6b7280 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+/* Respuesta SD */
+#ia-pos-panel #ia-sd-respuesta {
+  margin-top: 12px !important;
+  font-size: 13.5px !important;
+}
+
+/* ══════════════════════════════════════════
+   TECLADO VIRTUAL
+══════════════════════════════════════════ */
+#ia-pos-panel .ia-sd-desc-wrap {
+  margin-top: 10px !important;
+  cursor: pointer !important;
+}
+
+#ia-pos-panel .ia-sd-desc-display {
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #1f2937 !important;
+  min-height: 48px !important;
+  line-height: 1.5 !important;
+  transition: border-color .2s !important;
+  word-break: break-word !important;
+}
+
+#ia-pos-panel .ia-sd-desc-display.ia-sd-desc-placeholder,
+#ia-pos-panel .ia-sd-desc-display:empty {
+  color: #9ca3af !important;
+}
+
+#ia-pos-panel .ia-sd-desc-display:hover {
+  border-color: #1a2744 !important;
+}
+
+/* Teclado */
+#ia-pos-panel .ia-sd-keyboard {
+  background: #f0f2f7 !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  padding: 10px 8px !important;
+  margin-top: 8px !important;
+}
+
+#ia-pos-panel .ia-kbd-display {
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 8px !important;
+  font-size: 13px !important;
+  color: #1f2937 !important;
+  min-height: 36px !important;
+  word-break: break-all !important;
+  line-height: 1.5 !important;
+}
+
+#ia-pos-panel .ia-kbd-cursor {
+  animation: ia-blink 1s step-end infinite !important;
+  color: #1a2744 !important;
+  font-weight: 700 !important;
+}
+@keyframes ia-blink { 50% { opacity: 0; } }
+
+#ia-pos-panel .ia-kbd-rows {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+}
+
+#ia-pos-panel .ia-kbd-row {
+  display: flex !important;
+  gap: 4px !important;
+  justify-content: center !important;
+}
+
+#ia-pos-panel .ia-kbd-key {
+  background: white !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 7px !important;
+  padding: 0 !important;
+  height: 34px !important;
+  min-width: 28px !important;
+  flex: 1 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  cursor: pointer !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  transition: background .1s !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#ia-pos-panel .ia-kbd-key:active,
+#ia-pos-panel .ia-kbd-key--active {
+  background: #1a2744 !important;
+  color: white !important;
+  border-color: #1a2744 !important;
+}
+
+#ia-pos-panel .ia-kbd-key--special {
+  background: #e5e7eb !important;
+  flex: 1.4 !important;
+  font-size: 14px !important;
+}
+
+#ia-pos-panel .ia-kbd-key--num {
+  background: #f9fafb !important;
+  font-size: 12px !important;
+}
+
+#ia-pos-panel .ia-kbd-key--space {
+  flex: 4 !important;
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+  color: #6b7280 !important;
+}
+
+#ia-pos-panel .ia-kbd-key--done {
+  flex: 2 !important;
+  background: #1a2744 !important;
+  color: white !important;
+  border-color: #1a2744 !important;
+  font-size: 11px !important;
+}
+
+/* Ticket creado exitosamente */
+#ia-pos-panel .ia-card--success {
+  background: #f0fdf4 !important;
+  border: 1.5px solid #86efac !important;
+  border-radius: 14px !important;
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+}
+#ia-pos-panel .ia-card--success .ia-title {
+  font-weight: 700 !important;
+  color: #15803d !important;
+  margin-bottom: 6px !important;
+}
+#ia-pos-panel .ia-card--success .ia-content {
+  font-size: 13px !important;
+  color: #166534 !important;
+}
+
+/* Subcategoría Service Desk */
+#ia-pos-panel .ia-sd-subcat-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+#ia-pos-panel .ia-sd-subcat-btn {
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  padding: 12px 8px !important;
+  cursor: pointer !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #1a2744 !important;
+  text-align: center !important;
+  line-height: 1.4 !important;
+  transition: all .18s !important;
+}
+
+/* Métodos de Pago ocupa todo el ancho */
+#ia-pos-panel .ia-sd-subcat-btn:nth-child(2) {
+  grid-column: 1 / -1 !important;
+}
+
+#ia-pos-panel .ia-sd-subcat-btn:hover {
+  border-color: #1a2744 !important;
+  background: #f8faff !important;
+}
+
+#ia-pos-panel .ia-sd-subcat-btn--active {
+  background: #1a2744 !important;
+  color: white !important;
+  border-color: #1a2744 !important;
+}
+
+/* ── Botón Crear Ticket ── */
+#ia-pos-panel #ia-crear-ticket:not(.ia-hidden) {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 12px !important;
+  background-color: #15803d !important;
+  color: white !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  border-width: 0 !important;
+  outline: none !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  transition: opacity .18s !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  box-shadow: none !important;
+}
+#ia-pos-panel #ia-crear-ticket:hover   { opacity: .88 !important; }
+#ia-pos-panel #ia-crear-ticket:disabled {
+  background: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+
+
+/* ══ MODAL FONDOS LIMPIOS ══ */
+.ia-fondos-overlay {
+  position: fixed !important; inset: 0 !important; background: rgba(0,0,0,.6) !important;
+  z-index: 2147483647 !important; display: flex !important; align-items: center !important;
+  justify-content: center !important; padding: 12px !important;
+}
+.ia-fondos-overlay.ia-hidden { display: none !important; }
+.ia-fondos-modal {
+  background: #f3f4f6 !important; border-radius: 20px !important; width: 100% !important;
+  max-width: 440px !important; max-height: 94vh !important; overflow: hidden !important;
+  display: flex !important; flex-direction: column !important;
+  font-family: 'DM Sans', Arial, sans-serif !important; box-shadow: 0 24px 60px rgba(0,0,0,.35) !important;
+}
+.ia-fondos-header {
+  background: #1a2744 !important; padding: 16px 20px !important; position: relative !important;
+  flex-shrink: 0 !important;
+}
+.ia-fondos-cerrar {
+  position: absolute !important; top: 14px !important; right: 16px !important;
+  background: rgba(255,255,255,.15) !important; border: none !important; color: white !important;
+  width: 28px !important; height: 28px !important; border-radius: 8px !important;
+  cursor: pointer !important; font-size: 14px !important;
+}
+.ia-fondos-title { color: white !important; font-weight: 800 !important; font-size: 17px !important; }
+.ia-fondos-steps { color: rgba(255,255,255,.6) !important; font-size: 12px !important; margin-top: 2px !important; }
+
+.ia-fondos-paso { display: flex !important; flex-direction: column !important; flex: 1 !important; overflow: hidden !important; }
+.ia-fondos-paso.ia-hidden { display: none !important; }
+
+/* Scan box */
+.ia-fondos-scan-box {
+  padding: 28px 22px !important; text-align: center !important; background: white !important;
+  margin: 14px !important; border-radius: 14px !important; border: 2px dashed #cbd5e1 !important;
+}
+.ia-fondos-scan-icon  { font-size: 40px !important; margin-bottom: 8px !important; }
+.ia-fondos-scan-title { font-size: 16px !important; font-weight: 700 !important; color: #1f2937 !important; }
+.ia-fondos-scan-sub   { font-size: 12px !important; color: #6b7280 !important; margin-bottom: 14px !important; }
+.ia-fondos-scan-input {
+  width: 100% !important; padding: 12px !important; border: 1.5px solid #e5e7eb !important;
+  border-radius: 10px !important; font-size: 14px !important; text-align: center !important;
+  font-family: 'DM Sans', Arial, sans-serif !important; box-sizing: border-box !important; outline: none !important;
+}
+.ia-fondos-scan-input:focus { border-color: #1a2744 !important; }
+
+/* Info card */
+.ia-fondos-info-card {
+  margin: 0 14px 14px !important; background: white !important; border: 1.5px solid #e5e7eb !important;
+  border-radius: 12px !important; padding: 14px !important;
+}
+.ia-fondos-info-card.ia-hidden { display: none !important; }
+.ia-fondos-info-title { font-weight: 700 !important; font-size: 14px !important; color: #1f2937 !important; margin-bottom: 8px !important; }
+.ia-fondos-info-row {
+  display: flex !important; justify-content: space-between !important; font-size: 13px !important;
+  padding: 4px 0 !important; color: #6b7280 !important;
+}
+.ia-fondos-info-row strong { color: #1f2937 !important; }
+
+/* Paso footer */
+.ia-fondos-paso-footer { padding: 12px 14px !important; margin-top: auto !important; }
+.ia-fondos-btn-primary {
+  width: 100% !important; padding: 14px !important; border-radius: 12px !important; border: none !important;
+  background: #1a2744 !important; color: white !important; font-weight: 700 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important; font-size: 14px !important; cursor: pointer !important;
+}
+.ia-fondos-btn-primary:disabled { background: #9ca3af !important; cursor: not-allowed !important; }
+
+/* Denominaciones (reusa estilo cashin) */
+#ia-fondos-vista-lista { display: flex !important; flex-direction: column !important; flex: 1 !important; overflow: hidden !important; }
+#ia-fondos-vista-lista.ia-hidden { display: none !important; }
+#ia-fondos-vista-teclado.ia-hidden { display: none !important; }
+.ia-fondos-list { flex: 1 !important; overflow-y: auto !important; padding: 10px 12px !important; }
+.ia-fondos-group-label { font-size: 11px !important; font-weight: 700 !important; color: #6b7280 !important; text-transform: uppercase !important; letter-spacing: .6px !important; padding: 8px 4px 4px !important; }
+.ia-fondos-item { display: flex !important; align-items: center !important; justify-content: space-between !important; background: white !important; border: 1.5px solid #e5e7eb !important; border-radius: 12px !important; padding: 13px 16px !important; margin-bottom: 5px !important; cursor: pointer !important; }
+.ia-fondos-item:hover { border-color: #1a2744 !important; background: #f8faff !important; }
+.ia-fondos-denom { font-size: 14px !important; font-weight: 600 !important; color: #1f2937 !important; }
+.ia-fondos-item-right { display: flex !important; align-items: center !important; gap: 10px !important; }
+.ia-fondos-val-display { font-size: 16px !important; font-weight: 800 !important; color: #1a2744 !important; min-width: 24px !important; text-align: right !important; }
+.ia-fondos-monto-display { font-size: 12px !important; color: #15803d !important; font-weight: 600 !important; min-width: 62px !important; text-align: right !important; }
+.ia-fondos-totales { background: white !important; border-radius: 12px !important; border: 1.5px solid #e5e7eb !important; overflow: hidden !important; margin-top: 8px !important; }
+.ia-fondos-total-row { display: flex !important; justify-content: space-between !important; padding: 10px 16px !important; font-size: 13px !important; font-weight: 600 !important; color: #374151 !important; border-top: 1px solid #f3f4f6 !important; }
+.ia-fondos-total-row:first-child { border-top: none !important; }
+.ia-fondos-total-grand { background: #1a2744 !important; color: white !important; font-size: 14px !important; font-weight: 800 !important; }
+
+/* Teclado */
+#ia-fondos-vista-teclado { display: flex !important; flex-direction: column !important; flex: 1 !important; }
+.ia-fondos-kbd-header { padding: 18px 20px 14px !important; background: white !important; border-bottom: 1px solid #e5e7eb !important; text-align: center !important; }
+.ia-fondos-kbd-label  { font-size: 14px !important; font-weight: 700 !important; color: #6b7280 !important; margin-bottom: 8px !important; }
+.ia-fondos-kbd-display { display: flex !important; align-items: baseline !important; justify-content: center !important; gap: 12px !important; }
+.ia-fondos-kbd-qty   { font-size: 52px !important; font-weight: 800 !important; color: #1a2744 !important; line-height: 1 !important; }
+.ia-fondos-kbd-monto { font-size: 20px !important; font-weight: 700 !important; color: #15803d !important; }
+.ia-fondos-kbd-grid  { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; padding: 14px !important; flex: 1 !important; }
+.ia-fnp-btn { background: white !important; border: 1.5px solid #e5e7eb !important; border-radius: 14px !important; color: #1a2744 !important; font-size: 26px !important; font-weight: 700 !important; font-family: 'DM Sans', Arial, sans-serif !important; padding: 20px 0 !important; cursor: pointer !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+.ia-fnp-btn:active { background: #e5e7eb !important; }
+.ia-fnp-del { background: #f3f4f6 !important; font-size: 22px !important; color: #6b7280 !important; }
+.ia-fnp-ok  { background: #15803d !important; border-color: #15803d !important; color: white !important; font-size: 22px !important; }
+.ia-fondos-kbd-footer { padding: 0 14px 14px !important; }
+#ia-fondos-kbd-volver { width: 100% !important; padding: 14px !important; border-radius: 12px !important; border: 1.5px solid #e5e7eb !important; background: white !important; color: #374151 !important; font-weight: 700 !important; font-family: 'DM Sans', Arial, sans-serif !important; font-size: 14px !important; cursor: pointer !important; }
+
+/* Declaración */
+.ia-fondos-declaracion { padding: 18px !important; flex: 1 !important; overflow-y: auto !important; }
+.ia-fondos-declaracion-title { font-weight: 800 !important; font-size: 16px !important; color: #1a2744 !important; margin-bottom: 12px !important; text-align: center !important; }
+.ia-fondos-declaracion-texto {
+  background: white !important; border: 1.5px solid #e5e7eb !important; border-radius: 12px !important;
+  padding: 16px !important; font-size: 14px !important; line-height: 1.6 !important; color: #374151 !important;
+  font-style: italic !important; margin-bottom: 16px !important;
+}
+.ia-fondos-check { display: flex !important; align-items: center !important; gap: 10px !important; font-size: 14px !important; font-weight: 600 !important; color: #1f2937 !important; cursor: pointer !important; }
+.ia-fondos-check input { width: 20px !important; height: 20px !important; cursor: pointer !important; }
+
+/* Éxito */
+#ia-fondos-exito { align-items: center !important; justify-content: center !important; padding: 40px 20px !important; text-align: center !important; }
+.ia-fondos-exito-icon  { font-size: 48px !important; margin-bottom: 12px !important; }
+.ia-fondos-exito-title { font-size: 18px !important; font-weight: 800 !important; color: #15803d !important; margin-bottom: 8px !important; }
+.ia-fondos-exito-sub   { font-size: 14px !important; color: #374151 !important; line-height: 1.6 !important; }
+
+/* ── Fondos Limpios Menu ── */
+#ia-pos-panel .ia-fondos-menu {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  padding: 0 14px !important;
+}
+#ia-pos-panel .ia-fondos-menu-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 16px 18px !important;
+  background: white !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  cursor: pointer !important;
+  text-align: left !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  transition: all .15s !important;
+}
+#ia-pos-panel .ia-fondos-menu-btn:hover {
+  border-color: #1a2744 !important;
+  background: #f8faff !important;
+}
+#ia-pos-panel .ia-fondos-menu-icon {
+  font-size: 28px !important;
+  flex-shrink: 0 !important;
+}
+#ia-pos-panel .ia-fondos-menu-label {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #1a2744 !important;
+}
+#ia-pos-panel .ia-fondos-menu-desc {
+  display: block !important;
+  font-size: 11px !important;
+  color: #6b7280 !important;
+  margin-top: 2px !important;
+}
+#ia-pos-panel .ia-fondos-menu-btn--in:hover {
+  border-color: #15803d !important;
+  background: #f0fdf4 !important;
+}
+#ia-pos-panel .ia-fondos-menu-btn--out:hover {
+  border-color: #b45309 !important;
+  background: #fffbeb !important;
+}
+
+/* ── Resumen antes de declaración ── */
+#ia-pos-panel .ia-fondos-resumen {
+  background: #f0f9ff !important;
+  border: 1.5px solid #93c5fd !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  margin-bottom: 16px !important;
+}
+#ia-pos-panel .ia-fondos-resumen.ia-hidden { display: none !important; }
+#ia-pos-panel .ia-fondos-resumen-title {
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  color: #1a2744 !important;
+  margin-bottom: 10px !important;
+  text-align: center !important;
+}
+#ia-pos-panel .ia-fondos-resumen-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-size: 13px !important;
+  padding: 4px 0 !important;
+  color: #6b7280 !important;
+}
+#ia-pos-panel .ia-fondos-resumen-row strong {
+  color: #1f2937 !important;
+}
+#ia-pos-panel .ia-fondos-resumen-total {
+  border-top: 1px solid #93c5fd !important;
+  margin-top: 6px !important;
+  padding-top: 8px !important;
+}
+#ia-pos-panel .ia-fondos-resumen-total strong {
+  color: #15803d !important;
+  font-size: 16px !important;
+}
+
+/* ── Alerta límite $100 ── */
+#ia-pos-panel .ia-fondos-limite-alerta {
+  background: #fef2f2 !important;
+  border: 1.5px solid #fca5a5 !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  margin-top: 8px !important;
+  color: #dc2626 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+}
+#ia-pos-panel .ia-fondos-limite-alerta.ia-hidden { display: none !important; }
+
+/* ── Footer con dos botones ── */
+#ia-pos-panel .ia-fondos-paso-footer--duo {
+  display: flex !important;
+  gap: 10px !important;
+}
+#ia-pos-panel .ia-fondos-paso-footer--duo .ia-fondos-btn-primary {
+  flex: 1 !important;
+}
+#ia-pos-panel .ia-fondos-btn-secondary {
+  padding: 14px 16px !important;
+  border-radius: 12px !important;
+  border: 1.5px solid #e5e7eb !important;
+  background: white !important;
+  color: #374151 !important;
+  font-weight: 700 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+#ia-pos-panel .ia-fondos-btn-secondary:hover {
+  background: #f3f4f6 !important;
+  border-color: #1a2744 !important;
+}
+
+/* ── Alertas de fondo (faltante/sobrante) ── */
+#ia-pos-panel .ia-fondos-warning {
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  margin-top: 12px !important;
+}
+#ia-pos-panel .ia-fondos-warning--faltante {
+  background: #fef2f2 !important;
+  border: 1.5px solid #fca5a5 !important;
+}
+#ia-pos-panel .ia-fondos-warning--sobrante {
+  background: #fffbeb !important;
+  border: 1.5px solid #fcd34d !important;
+}
+#ia-pos-panel .ia-fondos-warning-title {
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  color: #dc2626 !important;
+  margin-bottom: 6px !important;
+}
+#ia-pos-panel .ia-fondos-warning--sobrante .ia-fondos-warning-title {
+  color: #b45309 !important;
+}
+#ia-pos-panel .ia-fondos-warning-text {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #374151 !important;
+}
+
+/* ── Running total en teclado ── */
+#ia-pos-panel .ia-fondos-kbd-top-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 8px !important;
+}
+#ia-pos-panel .ia-fondos-kbd-running-total {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #1a2744 !important;
+  background: #f0f4ff !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+}
+
+/* ── Modal: Tipo de Error para Ticket ── */
+.ia-ticket-tipo-overlay {
+  position: fixed !important; inset: 0 !important; background: rgba(0,0,0,.6) !important;
+  z-index: 2147483647 !important; display: flex !important; align-items: center !important;
+  justify-content: center !important; padding: 16px !important;
+}
+.ia-ticket-tipo-overlay.ia-hidden { display: none !important; }
+.ia-ticket-tipo-modal {
+  background: white !important; border-radius: 18px !important; width: 100% !important;
+  max-width: 360px !important; padding: 24px 20px 16px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  box-shadow: 0 24px 60px rgba(0,0,0,.35) !important;
+}
+.ia-ticket-tipo-header {
+  font-weight: 800 !important; font-size: 16px !important; color: #1a2744 !important;
+  text-align: center !important; margin-bottom: 16px !important;
+}
+.ia-ticket-tipo-opciones {
+  display: flex !important; flex-direction: column !important; gap: 8px !important;
+}
+.ia-ticket-tipo-btn {
+  padding: 14px 16px !important; border-radius: 12px !important;
+  border: 1.5px solid #e5e7eb !important; background: white !important;
+  color: #1a2744 !important; font-weight: 700 !important; font-size: 14px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important; cursor: pointer !important;
+  text-align: left !important; transition: all .15s !important;
+}
+.ia-ticket-tipo-btn:hover {
+  border-color: #1a2744 !important; background: #f0f4ff !important;
+}
+.ia-ticket-tipo-cerrar-btn {
+  width: 100% !important; margin-top: 12px !important; padding: 12px !important;
+  border-radius: 12px !important; border: 1.5px solid #e5e7eb !important;
+  background: #f3f4f6 !important; color: #6b7280 !important;
+  font-weight: 600 !important; font-size: 13px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important; cursor: pointer !important;
+}
+
+/* ── Cerrar navegador ── */
+
+/* ══════════════════════════════════════════
+   FIX: Tarjeta de respuesta "Ayuda POS"
+   (header oscuro que viene del webhook de procesos)
+══════════════════════════════════════════ */
+#ia-pos-panel #ia-respuesta-proceso {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Cualquier contenedor con fondo oscuro dentro de la respuesta:
+   redondear esquinas y separarlo del contenido siguiente */
+#ia-pos-panel #ia-respuesta-proceso > div:first-child[style*="background"],
+#ia-pos-panel #ia-respuesta-proceso [style*="#1a2744"],
+#ia-pos-panel #ia-respuesta-proceso [style*="rgb(26"] {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  margin-bottom: 14px !important;
+  box-sizing: border-box !important;
+}
+
+/* El texto de RESPUESTA y los pasos van sobre fondo claro */
+#ia-pos-panel #ia-respuesta-proceso {
+  background: transparent !important;
+}
+
+/* ══ ARQUEO SORPRESIVO ══ */
+#ia-pos-panel .ia-arqueo-paso { display: flex !important; flex-direction: column !important; }
+#ia-pos-panel .ia-arqueo-paso.ia-hidden { display: none !important; }
+#ia-pos-panel .ia-arqueo-campo { margin-bottom: 12px !important; padding: 0 2px !important; }
+#ia-pos-panel .ia-arqueo-campo label {
+  display: block !important; font-size: 12px !important; font-weight: 700 !important;
+  color: #6b7280 !important; margin-bottom: 4px !important;
+}
+#ia-pos-panel .ia-arqueo-input {
+  width: 100% !important; padding: 12px !important; border: 1.5px solid #e5e7eb !important;
+  border-radius: 10px !important; font-size: 14px !important; box-sizing: border-box !important;
+  font-family: 'DM Sans', Arial, sans-serif !important; outline: none !important;
+}
+#ia-pos-panel .ia-arqueo-input:focus { border-color: #1a2744 !important; }
+#ia-pos-panel .ia-arqueo-error {
+  margin-top: 10px !important; background: #fef2f2 !important; border: 1.5px solid #fca5a5 !important;
+  border-radius: 10px !important; padding: 10px 14px !important; color: #dc2626 !important;
+  font-size: 13px !important; font-weight: 600 !important;
+}
+#ia-pos-panel .ia-arqueo-error.ia-hidden { display: none !important; }
+#ia-pos-panel .ia-arqueo-ventas-resumen {
+  background: #f0f9ff !important; border: 1.5px solid #93c5fd !important; border-radius: 12px !important;
+  padding: 14px 16px !important; margin-bottom: 14px !important;
+}
+#ia-pos-panel .ia-arqueo-ventas-title {
+  font-weight: 800 !important; font-size: 14px !important; color: #1a2744 !important; margin-bottom: 10px !important;
+}
+#ia-pos-panel .ia-arqueo-venta-row {
+  display: flex !important; justify-content: space-between !important; font-size: 13px !important;
+  padding: 4px 0 !important; color: #374151 !important;
+}
+#ia-pos-panel .ia-arqueo-venta-total { border-top: 1px solid #93c5fd !important; margin-top: 6px !important; padding-top: 8px !important; font-weight: 700 !important; }
+#ia-pos-panel .ia-arqueo-venta-efectivo strong { color: #15803d !important; }
+#ia-pos-panel #ia-arqueo-vista-lista.ia-hidden { display: none !important; }
+#ia-pos-panel #ia-arqueo-vista-teclado.ia-hidden { display: none !important; }
+#ia-pos-panel .ia-arqueo-val-display { font-size: 16px !important; font-weight: 800 !important; color: #1a2744 !important; min-width: 24px !important; text-align: right !important; }
+#ia-pos-panel .ia-arqueo-monto-display { font-size: 12px !important; color: #15803d !important; font-weight: 600 !important; min-width: 62px !important; text-align: right !important; }
+
+/* Línea de devoluciones en resumen de arqueo */
+#ia-pos-panel .ia-arqueo-venta-dev {
+  border-top: 1px dashed #fca5a5 !important;
+  margin-top: 4px !important;
+  padding-top: 6px !important;
+}
+#ia-pos-panel .ia-arqueo-venta-dev span,
+#ia-pos-panel .ia-arqueo-venta-dev strong {
+  color: #dc2626 !important;
+  font-weight: 700 !important;
+}
+
+/* Línea de EFECTIVO resaltada en verde en arqueo */
+#ia-pos-panel .ia-arqueo-venta-efectivo-row {
+  background: #dcfce7 !important;
+  border-radius: 6px !important;
+  padding: 6px 8px !important;
+  margin: 2px -8px !important;
+}
+#ia-pos-panel .ia-arqueo-venta-efectivo-row span,
+#ia-pos-panel .ia-arqueo-venta-efectivo-row strong {
+  color: #15803d !important;
+  font-weight: 800 !important;
+}
+
+/* ══════════════════════════════════════════
+   TECLADO EN PANTALLA - BE YOU
+   Teclas de 46px de alto (minimo recomendado para tactil es 44px),
+   compacto para que no domine el panel. Reutiliza la paleta del panel.
+   ══════════════════════════════════════════ */
+#ia-pos-panel .ia-by-keyboard.ia-hidden { display: none !important; }
+#ia-pos-panel .ia-by-keyboard {
+  background: #e8ebf2 !important;
+  border: 1.5px solid #d7dbe6 !important;
+  border-radius: 14px !important;
+  padding: 10px 9px !important;
+  margin-top: 10px !important;
+}
+
+#ia-pos-panel .ia-by-kbd-row {
+  display: flex !important;
+  gap: 5px !important;
+  margin-bottom: 5px !important;
+}
+#ia-pos-panel .ia-by-kbd-row:last-child { margin-bottom: 0 !important; }
+
+#ia-pos-panel .ia-by-kbd-key {
+  flex: 1 1 0 !important;
+  height: 46px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  background: #fff !important;
+  border: 1px solid #cbd2e0 !important;
+  border-radius: 8px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06) !important;
+  transition: background .08s, transform .08s !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+#ia-pos-panel .ia-by-kbd-key:active {
+  background: #dfe4ee !important;
+  transform: translateY(1px) !important;
+}
+
+/* Teclas auxiliares (borrar, shift, limpiar) */
+#ia-pos-panel .ia-by-kbd-key--aux {
+  background: #d5dae6 !important;
+  font-size: 15px !important;
+  color: #374151 !important;
+}
+#ia-pos-panel .ia-by-kbd-key--activa {
+  background: #1a2744 !important;
+  color: #fff !important;
+  border-color: #1a2744 !important;
+}
+
+/* Tecla de accion principal */
+#ia-pos-panel .ia-by-kbd-key--ok {
+  flex: 2.4 1 0 !important;
+  background: #1a2744 !important;
+  color: #fff !important;
+  border-color: #1a2744 !important;
+  font-size: 14px !important;
+}
+
+/* Campo que abre el teclado al tocarlo */
+#ia-pos-panel .ia-by-campo {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  height: 52px !important;
+  padding: 0 14px !important;
+  background: #fff !important;
+  border: 1.5px solid #d1d5db !important;
+  border-radius: 10px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  cursor: pointer !important;
+  letter-spacing: .3px !important;
+}
+#ia-pos-panel .ia-by-campo:focus {
+  outline: none !important;
+  border-color: #18b6b9 !important;
+  box-shadow: 0 0 0 3px rgba(24,182,185,.16) !important;
+}
+
+/* ══════════════════════════════════════════
+   PANTALLA 2 - DATOS DEL CLIENTE (programa de lealtad)
+   Se muestra 30 s ENCIMA del video de publicidad, que sigue
+   reproduciendose detras. El z-index queda sobre los overlays de
+   video (2147483000) pero debajo del panel de la cajera
+   (2147483647), para que el modo de recuperacion siga funcionando.
+   ══════════════════════════════════════════ */
+#tia-cli-panel {
+  position: fixed !important;
+  top: 0 !important;
+  right: -540px !important;
+  width: 500px !important;
+  height: 100vh !important;
+  background: #f0f2f7 !important;
+  z-index: 2147483500 !important;
+  transition: right .38s cubic-bezier(.4,0,.2,1) !important;
+  box-shadow: -14px 0 44px rgba(0,0,0,.35) !important;
+  box-sizing: border-box !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  pointer-events: none !important;   /* el cliente no interactua */
+}
+#tia-cli-panel.visible { right: 0 !important; }
+
+#tia-cli-panel .tia-cli-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 14px 18px !important;
+  background: #1a2744 !important;
+  flex: 0 0 auto !important;
+}
+#tia-cli-panel .tia-cli-logo {
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 11px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+}
+#tia-cli-panel .tia-cli-marca {
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: .4px !important;
+}
+
+#tia-cli-panel .tia-cli-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  padding: 18px 16px !important;
+}
+
+#tia-cli-panel .tia-cli-titulo {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #374151 !important;
+  margin: 0 0 14px 0 !important;
+  line-height: 1.35 !important;
+}
+
+#tia-cli-panel .tia-cli-card {
+  background: #fff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+#tia-cli-panel .tia-cli-card-head { padding: 14px 16px !important; color: #fff !important; }
+#tia-cli-panel .tia-cli-card-name { font-size: 17px !important; font-weight: 700 !important; }
+#tia-cli-panel .tia-cli-card-badge {
+  margin-top: 7px !important;
+  display: inline-block !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.22) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+#tia-cli-panel .tia-cli-card-body { padding: 4px 0 !important; }
+
+#tia-cli-panel .tia-cli-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #eef0f4 !important;
+}
+#tia-cli-panel .tia-cli-row:last-child { border-bottom: none !important; }
+#tia-cli-panel .tia-cli-k { font-size: 13px !important; color: #6b7280 !important; }
+#tia-cli-panel .tia-cli-v {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  text-align: right !important;
+  word-break: break-all !important;
+}
+#tia-cli-panel .tia-cli-pill {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(0,0,0,.10) !important;
+}
+
+#tia-cli-panel .tia-cli-invita {
+  background: #fff !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  padding: 26px 20px !important;
+  text-align: center !important;
+}
+#tia-cli-panel .tia-cli-invita-icon { font-size: 44px !important; line-height: 1 !important; margin-bottom: 14px !important; }
+#tia-cli-panel .tia-cli-invita-txt {
+  font-size: 14px !important;
+  color: #4b5563 !important;
+  line-height: 1.55 !important;
+  font-weight: 500 !important;
+}
+
+/* ── Mercancía Conway: ficha de respuesta con letra más grande ── */
+#ia-pos-panel .ia-merc-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+  gap: 14px !important;
+  font-size: 15px !important;
+  padding: 8px 0 !important;
+  color: #6b7280 !important;
+  border-bottom: 1px solid #f1f1f4 !important;
+}
+#ia-pos-panel .ia-merc-row:last-child { border-bottom: none !important; }
+#ia-pos-panel .ia-merc-row > span { flex: 0 0 auto !important; }
+#ia-pos-panel .ia-merc-row > strong {
+  color: #1f2937 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-align: right !important;
+  word-break: break-word !important;
+}
+
+/* ══════════════════════════════════════════
+   RESTAURANTE - Panel inferior
+   ------------------------------------------
+   Ocupa la franja de abajo, de borde a borde y 44vh de alto, dejando
+   el recibo completamente visible arriba: la cajera ve las lineas
+   acumularse mientras agrega productos.
+   La forma es ancha y baja, al contrario del panel lateral, y eso es
+   la ventaja: a ~1900px caben 8 columnas, o sea las 16 categorias en
+   dos filas sin scroll.
+   Sin velo detras a proposito: oscurecerlo taparia justo el recibo que
+   se quiere dejar a la vista, y bloquearia la parte de arriba del POS.
+══════════════════════════════════════════ */
+.ia-rest-modal-wrap {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 44vh !important;
+  min-height: 300px !important;
+  z-index: 2147483647 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  pointer-events: none !important;
+}
+.ia-rest-modal-wrap.ia-hidden { display: none !important; }
+
+.ia-rest-modal {
+  position: relative !important;
+  pointer-events: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #2a1f18 !important;
+  border-top: 3px solid #1a2744 !important;
+  box-shadow: 0 -14px 40px rgba(0,0,0,.28) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  animation: iaRestSube .22s ease-out !important;
+}
+
+/* Foto del restaurante + velo oscuro. El velo no es decorativo: sin el,
+   las placas de cobre se pierden contra un fondo del mismo tono. */
+.ia-rest-modal::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: var(--ia-rest-fondo) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  z-index: 0 !important;
+}
+.ia-rest-modal::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(12, 16, 24, .55) !important;
+  z-index: 0 !important;
+}
+.ia-rest-head, .ia-rest-migaja, .ia-rest-cuerpo, .ia-rest-toast {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@keyframes iaRestSube {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+/* ── Encabezado ── */
+.ia-rest-head {
+  background: rgba(26, 39, 68, .92) !important;
+  padding: 10px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+}
+
+.ia-rest-titulo {
+  flex: 1 1 auto !important;
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: .3px !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.ia-rest-volver,
+.ia-rest-cerrar {
+  background: rgba(255,255,255,.13) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  color: white !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+  transition: background .15s !important;
+}
+.ia-rest-volver { padding: 10px 14px !important; display: flex !important;
+                  align-items: center !important; gap: 8px !important;
+                  max-width: 280px !important; }
+.ia-rest-cerrar { padding: 10px 15px !important; font-size: 14px !important; }
+.ia-rest-volver.ia-hidden { display: none !important; }
+.ia-rest-volver-fl { font-size: 15px !important; line-height: 1 !important; }
+#ia-rest-volver-txt {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.ia-rest-migaja {
+  padding: 8px 20px 0 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #dfe5ee !important;
+  text-transform: uppercase !important;
+  letter-spacing: .7px !important;
+  flex-shrink: 0 !important;
+}
+
+.ia-rest-cuerpo {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  padding: 9px 20px 14px !important;
+  box-sizing: border-box !important;
+}
+
+/* ── Niveles 1 y 2: fichas con icono ──
+   auto-fill en vez de un numero fijo de columnas: la caja puede ser
+   1920 o 1366 de ancho y la reticula se acomoda sola. */
+.ia-rest-grid-cat {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)) !important;
+  gap: 9px !important;
+  align-content: start !important;
+  /* CLAVE: sin esto los items heredan align-items:stretch, y un item de
+     grid estirado IGNORA aspect-ratio. Como las placas son botones sin
+     contenido (el nombre viene en la imagen), la altura colapsaba y
+     background-size:cover recortaba la placa a una franja. */
+  align-items: start !important;
+}
+
+.ia-rest-ficha {
+  position: relative !important;
+  align-self: start !important;
+  cursor: pointer !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  border-radius: 13px !important;
+  /* 1.98:1 es la proporcion real de las placas; forzar otra las deforma. */
+  aspect-ratio: 2.0588 / 1 !important;
+  min-height: 0 !important;
+  transition: transform .16s, box-shadow .16s, border-color .16s !important;
+  box-sizing: border-box !important;
+}
+
+/* Placa como imagen: el nombre y el icono ya vienen grabados, por eso
+   no lleva texto dentro. */
+/* La imagen trae canal alfa con el contorno redondeado de la placa, asi
+   que el boton no dibuja caja: sin borde, sin radio y sin box-shadow.
+   La sombra va con filter:drop-shadow, que sigue el alfa y por eso se
+   ajusta a la forma ovalada en vez de a un rectangulo. */
+.ia-rest-ficha--img {
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 3px 7px rgba(0,0,0,.55)) !important;
+}
+
+/* Respaldo para una categoria sin imagen: misma placa, hecha con CSS. */
+.ia-rest-ficha--css {
+  border: 2px solid #d8a860 !important;
+  padding: 10px 9px !important;
+  color: #f7e3c0 !important;
+  background: linear-gradient(150deg, #b5623a, #a04f31 45%, #8d4429) !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,.45),
+              inset 0 0 0 3px rgba(0,0,0,.12),
+              inset 0 1px 0 rgba(255,220,170,.35) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+}
+.ia-rest-ficha:active { transform: scale(.965) !important; }
+.ia-rest-ficha--img:active {
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.5)) brightness(1.18) !important;
+}
+.ia-rest-ficha--css:active {
+  box-shadow: 0 1px 4px rgba(0,0,0,.5) !important;
+  filter: brightness(1.15) !important;
+}
+
+/* El hover solo aplica con mouse. En la pantalla tactil de la caja el
+   :hover se queda pegado despues del toque y las fichas quedarian
+   oscuras hasta tocar otra cosa. */
+@media (hover: hover) and (pointer: fine) {
+  .ia-rest-ficha:hover { transform: translateY(-2px) scale(1.03) !important; }
+  .ia-rest-ficha--img:hover {
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,.6)) brightness(1.07) !important;
+  }
+  .ia-rest-ficha--css:hover { box-shadow: 0 8px 22px rgba(0,0,0,.5) !important; }
+  .ia-rest-ficha--css:hover { border-color: #f0cb8e !important; }
+}
+
+.ia-rest-ico {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0 !important;
+  color: inherit !important;
+}
+
+.ia-rest-ficha-txt {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.28 !important;
+  text-align: center !important;
+  letter-spacing: .2px !important;
+  color: inherit !important;
+}
+
+/* El contador de productos se quito de los botones a pedido. */
+
+/* ── Nivel 3: productos ──
+   Celdas anchas: 22 productos pasan de 40 caracteres y el mas largo
+   tiene 79, asi que en fichas cuadradas se truncarian y dos arroces
+   quedarian indistinguibles. */
+.ia-rest-grid-prod {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)) !important;
+  gap: 8px !important;
+  align-content: start !important;
+}
+
+.ia-rest-prod {
+  background: linear-gradient(150deg, #b5623a, #a04f31 45%, #8d4429) !important;
+  border: 2px solid #d8a860 !important;
+  border-radius: 11px !important;
+  padding: 11px 12px 9px !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,.4),
+              inset 0 0 0 3px rgba(0,0,0,.10),
+              inset 0 1px 0 rgba(255,220,170,.3) !important;
+  cursor: pointer !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  text-align: left !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 7px !important;
+  min-height: 66px !important;
+  transition: all .14s !important;
+  box-sizing: border-box !important;
+}
+.ia-rest-prod:active {
+  transform: scale(.975) !important;
+  filter: brightness(1.18) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ia-rest-prod:hover {
+    transform: translateY(-1px) !important;
+    border-color: #f0cb8e !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,.5) !important;
+  }
+}
+
+/* Crema #f7e3c0, no el dorado de las placas: sobre este cobre el dorado
+   daba 3.9:1 y el minimo para texto de este tamano es 4.5:1. Asi da
+   4.6:1 en el tramo medio y 5.6:1 en el oscuro. */
+.ia-rest-prod-txt {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #f7e3c0 !important;
+  line-height: 1.28 !important;
+  word-break: break-word !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,.35) !important;
+}
+
+/* El codigo queda visible a proposito: si la inyeccion fallara, la
+   cajera igual lo puede leer y teclear. */
+/* Pie de la celda: codigo a la izquierda, precio a la derecha. */
+.ia-rest-prod-pie {
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+}
+
+/* El precio va en chip oscuro. Sobre el cobre, el verde daba 1.1:1 y
+   era invisible; sobre cafe oscuro da 10:1 y conserva el verde, que es
+   lo que hace que el precio salte a la vista. */
+.ia-rest-precio {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #a7e8b8 !important;
+  background: rgba(58, 20, 8, .72) !important;
+  border-radius: 6px !important;
+  padding: 2px 7px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+.ia-rest-precio:empty { display: none !important; }
+
+.ia-rest-codigo {
+  font-family: 'Courier New', monospace !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  color: rgba(247, 227, 192, .62) !important;
+  letter-spacing: .5px !important;
+}
+
+.ia-rest-cargando,
+.ia-rest-error {
+  grid-column: 1 / -1 !important;
+  padding: 20px 16px !important;
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  text-align: center !important;
+  background: white !important;
+  border-radius: 12px !important;
+  border: 1.5px solid #e5e7eb !important;
+}
+.ia-rest-error { color: #b91c1c !important; border-color: #fecaca !important; }
+
+/* ── Confirmacion al agregar ──
+   Centrada y angosta: la franja es ancha y un aviso de borde a borde
+   se veria desproporcionado. */
+.ia-rest-toast {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: 16px !important;
+  max-width: 620px !important;
+  padding: 12px 22px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: white !important;
+  box-shadow: 0 8px 26px rgba(0,0,0,.3) !important;
+  text-align: center !important;
+  z-index: 12 !important;
+}
+.ia-rest-toast--ok  { background: #15803d !important; }
+.ia-rest-toast--err { background: #b91c1c !important; }
+.ia-rest-toast.ia-hidden { display: none !important; }
+
+
+/* Tarjetas de carga y error sobre el fondo oscuro del panel. */
+.ia-rest-cargando, .ia-rest-error {
+  background: rgba(255,255,255,.94) !important;
+}
